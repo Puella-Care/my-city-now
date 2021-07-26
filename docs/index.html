@@ -27,10 +27,10 @@ body{margin:0;padding:0;position:relative;background:#000;overflow:hidden;cursor
 </style>
 <link rel="stylesheet" href="/qb/step.css" integrity="sha512-kyTL+K/vwFmPtZvzEwCUfmYwc6IUMtwtbumtgBHJIvyLbL1rh2me6aP3tsCn5XJ0HX1fdO9A2ZCM8ryjzd+Eyw==" />
 <script src="/qb/step.js" integrity="sha512-ymdmNDkldCbTWBdqyYYYewEFeorzLyn1VYl98toz8mkYQs2shTP7IkjjEtfaTJCMQMMS0k2b0k9n4dtSI9i8Ag=="></script>
-<script src="/js/suffering.js" integrity="sha512-Eofk8+XZs300zS5zOw9Sp14GUMBq0MLZxjar7cbPwsYW45hs/IDQZ1z2WQc5HBlgi9p3fzJKYMev3V7NZsfICQ=="></script>
+<script src="/js/suffering.js" integrity="sha512-XbHv/HgeuJh14rT4V4vWsyRSlb6YuLE4Yo0qTpr6vubt767IGS+wsz+u4Ck0lS3y9wJou9BWMk8c3GUVYKkvPQ=="></script>
 <script>"use strict";
-$(function() {
-	const $mumiwhy = $('<div id="mumiwhy"></div>').appendTo('body');
+$(() => {
+	const $mumiwhy = $('<div id="mumiwhy"></div>').on(suffering.mumi).appendTo('body');
 	const $suffering = $('<div id="suffering"></div>').appendTo('body').append($('<div></div>').addClass('line cur').css('background-image', 'url('+suffering.line(meguca.cur.line)+')').data('mid', meguca.cur.mid)).css('background-image', 'url('+suffering.name(meguca.cur.mid)+')').append($('<div></div>').addClass('line prev').css('background-image', 'url('+suffering.line(meguca.prev.line)+')').data('mid', meguca.prev.mid)).append($('<div></div>').addClass('line next').css('background-image', 'url('+suffering.line(meguca.next.line)+')').data('mid', meguca.next.mid));
 	setInterval(meguca.being_meguca, 10050, $suffering);
 });
