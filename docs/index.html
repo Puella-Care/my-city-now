@@ -29,12 +29,12 @@ body{margin:0;padding:0;position:relative;background:#000;overflow:hidden;cursor
 <link href="/qb/step.css" integrity="sha512-BdDgPDg3Sk8Dtb4rTsQotu9RQul00bFh5wPdbuNAqcqxIQzpZj4DMwUENaI7hgjNMzlLnr8Aefzw1CJaYLUDpA==" crossorigin="anonymous" rel="stylesheet" />
 <script src="/qb/step.js" integrity="sha512-tDDGV8c1stMEeq4LRDb6IQbHCb+34/a0pOX19iUStetdyhCJHqLS44bDS3x3n83tjqYZiSBDwZUgTNczPcPczA==" crossorigin="anonymous" defer></script>
 <script src="/js/jquery-3.6.0.smol.min.js" integrity="sha512-hsn94R99cME+Pu6VMs2iGzOV4YNNaIiTcVg6ZEfeg49rzp9kRdENxquTh22wLy3wayKcddqiMFq7UxhZsrTaaQ=="></script>
-<script src="/js/suffering.mjs" integrity="sha512-h9YXlO89bjwEvN3w37Ph2JJDAZZ9af3cYYXhkNMI9rb5f1JqzALcI88NwR3rKSUPq+8Nbe5PAHUsDvr548GsAg==" type="module"></script>
+<script src="/js/suffering.mjs" integrity="sha512-laiwCkSxh8XpXRkZxPHIad4z4pM+rUqMc61Sle/DvQfIq1F/Dd5BUdTTgd5olW6hvD6YJ+R7gXkfu5kflNX2CA==" type="module"></script>
 <script>"use strict";
 (entropy => import(entropy).then(({meguca, suffering}) => $(() => {
 	const $mumiwhy = $('<div/>',{id:"mumiwhy",on:suffering.mumi,appendTo:'body'});
-	const $suffering = $('<div/>',{id:"suffering",css:{"background-image":'url('+suffering.name(meguca.cur.mid)+')'},append:['cur','prev','next'].map(p=>$('<div/>',{"class":'line '+p,css:{"background-image":'url('+suffering.line(meguca[p].line)+')'},data:{mid:meguca[p].mid}})),appendTo:'body'});
-	setInterval(meguca.being_meguca, 10050, $suffering);
+	const $suffering = $('<div/>',{id:"suffering",css:{"background-image":'url('+suffering.names[meguca.cur.mid]+')'},append:['cur','prev','next'].map(p=>$('<div/>',{"class":'line '+p,css:{"background-image":'url('+meguca[p].line+')'},data:{mid:meguca[p].mid}})),appendTo:'body'});
+	setInterval(meguca.being_meguca, 9646, $suffering);
 })).catch(console.error))(atob("L2pzL3N1ZmZlcmluZy5tanM="));
 </script>
 </head>
